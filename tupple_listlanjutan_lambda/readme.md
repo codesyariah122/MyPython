@@ -1,0 +1,4 @@
+👾👾👾👾👾👾👾👾
+Jujur saja, sebenarnya masih banyak topik maupun tips dan trik yang belum dibahas di sini. Tetapi anda tidak perlu belajar semua hal tetek bengek di Python untuk menjadi seorang coder Python yang handal. Seperti halnya menulis novel, penulis novel yang memenangkan penghargaan bukanlah penulis yang menghapal semua baris di kamus bahasa tetapi penulis yang dapat meramu kata yang dia miliki hingga menciptakan cerita yang dashyat. Begitu juga dengan anda, dengan apa yang anda punya sekarang anda sudah bisa membuat program yang keren, tinggal bagaimana anda meramunya.
+
+Tapi jangan berhenti di sini dulu, di sub-bab berikutnya kita akan belajar tentang class dan pemograman berorientasi objek di Python.
