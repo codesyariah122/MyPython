@@ -15,13 +15,13 @@ cnx = mysql.connector.connect(
 
 cursor = cnx.cursor()
 
-sql = """CREATE TABLE {} (
-	id_ular INT AUTO_INCREMENT PRIMARY KEY,
-	nama_ular VARCHAR(255),
-	nama_latin VARCHAR(255)
-)
-"""
+sql = "SELECT * FROM {}".format(nama_tb)
 
-cursor.execute(sql.format(nama_tb))
+cursor.execute(sql)
 
-print("Table ular_berbisa berhasil dibuat")
+results = cursor.fetchall()
+
+for data in results:
+	print(data)
+
+cnx.close()

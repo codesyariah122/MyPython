@@ -3,14 +3,15 @@ import mysql.connector
 host = 'localhost'
 user = 'root'
 passwd = '1'
+nama_db = 'nama_ular'
 
-db = mysql.connector.connect(
+cnx = mysql.connector.connect(
 		host = host,
 		user = user,
-		passwd = passwd
+		password = passwd
 	)
 
-cursor = db.cursor()
-cursor.execute("CREATE DATABASE nama_ular")
+cursor = cnx.cursor()
+cursor.execute("CREATE DATABASE {}".format(nama_db))
 
 print("Database berhasil dibuat")

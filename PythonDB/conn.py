@@ -3,14 +3,15 @@ import mysql.connector
 host = 'localhost'
 user = 'root'
 passwd = '1'
+db = 'nama_ular'
 
-db = mysql.connector.connect(
+cnx = mysql.connector.connect(
 		host = host,
 		user = user,
-		passwd = passwd
+		password = passwd
 	)
 
-if db.is_connected():
-	print("Berhasil terhubung ke database server")
+if cnx.is_connected():
+	print("Berhasil terhubung ke server")
 
-db.close()
+cnx.close()
