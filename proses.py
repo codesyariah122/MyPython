@@ -80,10 +80,17 @@ def ping_connection():
         print("Masukan nama domain ? ")
 
 
+def device_name():
+    device = os.system("uname -a")
+    print(device)
+
+
 def system_menu():
+    print("\n\n")
     print("=== OPERATIONAL DATABASE PYTHON ====")
     print("1. Ping Koneksi")
     print("2. Domain information groper / dig")
+    print("3. Check nama komputermu")
     print("0 Keluar")
     print("------------------------------------")
     menu = int(input("Pilih menu> - "))
@@ -95,6 +102,8 @@ def system_menu():
             ping_connection()
         case 2:
             dig_dns()
+        case 3:
+            device_name()
         case 0 | _:
             os.system("clear")
             print("Pilih menu Lagi")
