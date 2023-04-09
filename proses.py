@@ -43,6 +43,7 @@ def dig_dns():
     input_type = type(domain) == str
     domain_ext = [".com", ".co", ".id"]
 
+    # while True:
     if domain != "":
         if input_type:
             enter_domain = domain.split(".")
@@ -56,3 +57,48 @@ def dig_dns():
             print("Please input string only !")
     else:
         print("Masukan nama domain ? ")
+
+
+def ping_connection():
+    domain = input("Masukan nama domain / host yang di inginkan : ").lower()
+    input_type = type(domain) == str
+    domain_ext = [".com", ".co", ".id"]
+
+    # while True:
+    if domain != "":
+        if input_type:
+            enter_domain = domain.split(".")
+            valid_domain = ".{}".format(enter_domain[1])
+            if valid_domain in domain_ext:
+                returned_value = os.system("ping -C {}".format(domain))
+                print(returned_value)
+            else:
+                print("Domain not found")
+        else:
+            print("Please input string only !")
+    else:
+        print("Masukan nama domain ? ")
+
+
+def system_menu():
+    print("=== OPERATIONAL DATABASE PYTHON ====")
+    print("1. Ping Koneksi")
+    print("2. Domain information groper / dig")
+    print("0 Keluar")
+    print("------------------------------------")
+    menu = int(input("Pilih menu> - "))
+
+    os.system("clear")
+
+    match menu:
+        case 1:
+            ping_connection()
+        case 2:
+            dig_dns()
+        case 0 | _:
+            os.system("clear")
+            print("Pilih menu Lagi")
+
+    if __name__ != "__main__":
+        while True:
+            system_menu()
