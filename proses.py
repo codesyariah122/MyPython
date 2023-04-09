@@ -46,10 +46,12 @@ def dig_dns():
     if domain != "":
         if input_type:
             enter_domain = domain.split(".")
-            valid_domain = domain_ext.index(".{}".format(enter_domain[1]))
-            if valid_domain != "":
+            valid_domain = ".{}".format(enter_domain[1])
+            if valid_domain in domain_ext:
                 returned_value = os.system("dig {}".format(domain))
                 print(returned_value)
+            else:
+                print("Domain not found")
         else:
             print("Please input string only !")
     else:
