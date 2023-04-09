@@ -9,7 +9,7 @@ def hitung_laba():
             percentase = round((int(percentased) * 100) / 100)
             nama_barang = data["nama_barang"].lower()
             harga_beli = int(data["harga_beli"])
-            harga_satuan = round(harga_beli / int(data["isi"])) + int(biaya_produksi)
+            harga_satuan = round(harga_beli / int(data["isi"])) - int(biaya_produksi)
             harga_jual = round(harga_satuan + (percentase * harga_satuan) / 100)
             laba = round(harga_jual - harga_satuan)
             persentase_laba = round((laba / harga_satuan) * 100)
